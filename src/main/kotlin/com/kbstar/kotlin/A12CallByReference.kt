@@ -11,8 +11,7 @@ fun main() {
     println("result = ${result}")
 }
 
-fun funcParam(a:Int, b:Int, c:(Int, Int) -> Int) : Int
-{
+fun funcParam(a:Int, b:Int, c:(Int, Int) -> Int) : Int  {
     return c(a,b)
 }
 
