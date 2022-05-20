@@ -71,4 +71,6 @@ fun main() {
     result = num1 or num2   // num1 | num2 = 01100 | 11001 = 11101 = 29
     println("result = ${result}")
 
+    var str7 : String? = "HelloKotlin"
+    println("str7 : $str7, length = ${str7?.length ?: -1}") // length = ${ true ?: false } -> 있으면 length, 없으면 -1 반환
 }
