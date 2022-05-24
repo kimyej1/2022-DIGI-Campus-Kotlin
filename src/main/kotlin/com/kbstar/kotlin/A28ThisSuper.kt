@@ -77,3 +77,16 @@ fun main() {
     Car taxi = new Car()
     SportsCar bmw = new SportsCar("bmw", 1)
  */
+
+/*
+    자바의 접근 권한
+
+    public
+    protected
+    private
+    _______ : package
+
+    Kotlin : public, private, protected, internal
+    internal : 같은 정의에 모듈 내부에서 접근 가능
+    private : Information Hiding, Data Encapsulation
+ */
