@@ -70,7 +70,7 @@ class SecondBird(var name:String = "noname", var wing:Int=2, var beak:String="sh
     init {
         println("start init SecondBird")
         println("name = ${name}, color = ${color}")
-        this.fly()
+        this.fly();
         this.sing(0)
     }
 
