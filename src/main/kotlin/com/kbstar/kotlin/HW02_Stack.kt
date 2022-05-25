@@ -16,23 +16,36 @@ fun main() {
                 if(stack.size == 5) {
                     println("Stack is already Full.")
                 } else {
-                    print("Insert number to Push : ")
-                    var push = readln()!!.toInt()
-                    stack = stack.plus(push)
+                    var flag = 0
+                    while(flag == 0) {
+                        print("Insert number to Push : ")
+                        try {
+                            var push = readln()!!.toInt()
+                            stack = stack.plus(push)
+                            flag = 1
+                        } catch (e: Exception) {
+                            println("Invalid number, please try again.")
+                        }
+                    }
                 }
             }
             "2" -> {
                 if(stack.isEmpty()) {
                     println("Stack is Empty.")
                 } else {
-                    stack = stack.sliceArray(0..stack.size-2)
+                    stack = stack.sliceArray(0 until stack.size-1)
                 }
             }
             "3" -> {
-                for(i in stack.size-1 downTo 0) {
-                    println(stack[i])
+                if(stack.isEmpty()) {
+                    println("Stack is Empty.")
+                } else {
+                    for (i in stack.size - 1 downTo 0) {
+                        println(stack[i])
+                    }
                 }
             }
+            else -> println("Invalid menu, please try again.")
         }
     }
 }
